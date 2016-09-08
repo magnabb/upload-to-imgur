@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ImagesController@index');
+Route::get('upload/{id}', 'ImagesController@upload');
+Route::get('add', 'ImagesController@addForm');
+Route::post('add', 'ImagesController@add');
